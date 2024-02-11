@@ -1,4 +1,5 @@
-# walklytics
+# walklytics ![Walklytics Logo](https://github.com/KingsleyCKE/walklytics/assets/102693879/e7c3e516-9b04-452f-8973-50a054043ebd)
+
 
 A system that analyzes one's gait patterns and gives feedback to the user. 
 
