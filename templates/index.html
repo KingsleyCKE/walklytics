@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Walklytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <a href="/">
+          <img src="{{ url_for('static', filename='Walklytics_logo.png') }}" alt="Walklytics Logo" class="logo">
+        </a>
+        <h1>Analysis Results</h1>
+    </header>
+    <main>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <label for="video">Choose a video file</label>
+            <input type="file" id="video" name="video" accept="video/mp4">
+            <input type="submit" value="Upload">
+        </form>
+    </main>
+</body>
+</html>
