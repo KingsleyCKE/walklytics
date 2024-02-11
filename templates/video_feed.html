@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Feed - Walklytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        // JavaScript to redirect to the results page after the video processing is done
+        function checkEndOfVideo() {
+            var img = document.getElementById('videoFrame');
+            img.onerror = function() {
+                // If the video ends, the image will fail to load, and we can redirect
+                window.location.href = "{{ url_for('submit') }}"; // Replace 'submit_results' with the correct route for showing results
+            };
+        }
+    </script>
+</head>
+<body onload="checkEndOfVideo();">
+    <header>
+        <a href="/">
+            <img src="{{ url_for('static', filename='Walklytics_logo.png') }}" alt="Walklytics Logo" class="logo">
+        </a>
+        <h1>Processing Video...</h1>
+    </header>
+    <main>
+        <img id="videoFrame" src="{{ url_for('video_feed') }}">
+    </main>
+</body>
+</html>

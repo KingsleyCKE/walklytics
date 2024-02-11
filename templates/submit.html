@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+      <a href="/">
+        <img src="{{ url_for('static', filename='Walklytics_logo.png') }}" alt="Walklytics Logo" class="logo">
+      </a>
+      <h1>Analysis Results</h1>
+    </header>
+    <main>
+        <h2>{{ message }}</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p>File Name: {{ filename }}</p>
+        <p>Analysis Results:</p>
+        <p>{{ results }}</p>
+    </main>
+</body>
+</html>
